@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form action="" onsubmit="mysubmit()">
+
+            <div class="email">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="abc@Gmail.com" id="email" required>
+            </div>
+
+            <div class="password">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="********" required>
+                <br>
+                <label for="" id="show_text">Show Password</label>
+                <input type="checkbox" id="hide_button" onchange="hideAndshow()">
+            </div>
+
+            <button id="submit_button" onclick="sibmitForm()">Submit</button>
+
+        </form>
+
+        <div id="displayData"></div>
+
+    </div>
+
+    <div class="underline"></div>
+
+
+    <div class="container2">
+
+        <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non enim ad temporibus maxime incidunt
+            reprehenderit natus pariatur? Delectus, voluptate! Dolores omnis ipsum voluptatibus alias repellat officiis
+            provident iusto ad commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad autem qui
+            consequuntur eaque! Facere veniam voluptas dignissimos nobis ab, assumenda mollitia quidem consequuntur
+            perspiciatis. Voluptatum molestiae magnam inventore odit?</p>
+
+            <div id="moreData"></div>
+
+            <button id="read_button" onclick="readMore()">Read more</button>
+            
+    </div>
+
+    <div class="underline"></div>
+
+
+    <h2>Student Details</h2>
+
+    <form id="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+
+        <button type="button" onclick="addStudent()">Add Student</button>
+    </form>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Student details will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <div id="editForm" style="display: none;">
+        <h2>Edit Student</h2>
+        <label for="editName">Name:</label>
+        <input type="text" id="editName" required>
+
+        <label for="editAge">Age:</label>
+        <input type="number" id="editAge" required>
+
+        <button type="button" onclick="updateStudent()">Update</button>
+        <button type="button" onclick="cancelEdit()">Cancel</button>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+
+</html>
